@@ -9,8 +9,14 @@ html {
   font-size: 10px;
 }
 
+.image {
+  width: 100%;
+  border-radius: 50%;
+  vertical-align: middle;
+}
 .wrapper-page {
   position: relative;
+  min-width: 768px;
 }
 .background-page-top {
   height: 12vh;
@@ -28,4 +34,31 @@ html {
   height: 95vh;
   transform: translate(-50%, -50%);
   background-color: olive;
+  display: flex;
+}
+.aside {
+  width: calc(100% / 3);
+  background-color: brown;
+}
+/* ↓ .header della sezione .aside ↓ */
+.aside__header {
+  display: flex;
+  flex-direction: column;
+}
+.aside__header__my-panel {
+  width: 100%;
+  padding: 0.5rem 0.5rem;
+  background-color: salmon;
+  display: flex;
+  justify-content: space-between;
+}
+.my-panel__profile {
+  width: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.primary {
+  width: calc((100%/3)*2);
+  background-color: aqua;
 }
