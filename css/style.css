@@ -150,6 +150,7 @@ html {
   background-color: #fff;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
+  cursor: pointer;
 }
 .aside__main__chat:hover {
   filter: brightness(0.9);
