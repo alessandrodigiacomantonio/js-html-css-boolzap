@@ -151,6 +151,9 @@ html {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
 }
+.aside__main__chat:hover {
+  filter: brightness(0.9);
+}
 .chat__profile {
   width: 5rem;
   height: 5rem;
