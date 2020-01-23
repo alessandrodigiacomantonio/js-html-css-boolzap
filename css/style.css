@@ -48,6 +48,7 @@ html {
 .aside {
   width: 30%;
   background-color: #f8f8f8;
+  border-right: 1px solid #ddd;
 }
 /* ↓ .header della sezione .aside ↓ */
 .aside__header {
@@ -141,7 +142,6 @@ html {
 .aside__main {
   display: flex;
   flex-direction: column;
-  /* margin-top: 1rem; */
 }
 .aside__main__chat {
   padding: 1rem 1.5rem;
@@ -186,14 +186,48 @@ html {
   margin-bottom: 0.5rem;
   color: #aaa;
 }
-.chat__actions__icon {
-
-}
+/* ↑ .main della sezione .aside ↑ */
 
 .primary {
   width: 70%;
   background-image: url(../img/background-primarysection.jpg);
   background-position: center;
-  background-size: cover;
+  background-size: 80%;
+}
+.primary__header {
+  padding: 1rem 1.5rem;
+  background-color: #ededed;
+  display: flex;
+  align-items: center;
+}
+.header__profile {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.header__txt {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-overflow: ellipsis;
+}
+.header__txt__name {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+.header__txt__last-access {
+  font-size: 1.3rem;
+  color: #aaa;
+}
+.header__control-tools {
+  display: flex;
+  align-items: center;
+}
+[class*="icon header"]:not(:last-child) {
+  margin-right: 3rem;
 }
 /* ↑ corpo del documento ↑ */
