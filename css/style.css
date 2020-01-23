@@ -20,6 +20,20 @@ html {
   align-items: center;
   cursor: pointer;
 }
+.message {
+  display: flex;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  padding: 2rem;
+  background-color: #fff;
+  font-size: 1.5rem;
+  max-width: 45%;
+}
+.message-send {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+  max-width: 45%;
+}
 .wrapper-page {
   position: relative;
   /* min-width: 768px; */
@@ -153,12 +167,12 @@ html {
   display: flex;
   align-items: center;
   background-color: #fff;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
   cursor: pointer;
 }
 .aside__main__chat:hover {
-  filter: brightness(0.9);
+  filter: brightness(0.95);
 }
 .chat__profile {
   width: 5rem;
@@ -242,7 +256,9 @@ html {
 }
 .primary__main {
   display: flex;
+  flex-direction: column;
   flex-grow: 1;
+  padding: 3rem 6rem;
 }
 .primary__footer {
   padding: 1rem 1.5rem;
@@ -266,5 +282,5 @@ html {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #aaa;
+  background-color: #bbb;
 }
