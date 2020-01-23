@@ -47,6 +47,7 @@ html {
 }
 .aside {
   width: 30%;
+  height: 100%;
   background-color: #f8f8f8;
   border-right: 1px solid #ddd;
 }
@@ -142,6 +143,8 @@ html {
 .aside__main {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
+  overflow-y: scroll;
 }
 .aside__main__chat {
   padding: 1rem 1.5rem;
@@ -162,6 +165,8 @@ html {
   overflow: hidden;
   cursor: pointer;
   margin-right: 2rem;
+  display: flex;
+  align-items: center;
 }
 .chat__txt {
   display: flex;
@@ -232,3 +237,11 @@ html {
   margin-right: 3rem;
 }
 /* ↑ corpo del documento ↑ */
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+}
