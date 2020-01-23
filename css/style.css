@@ -42,13 +42,12 @@ html {
   width: 72.7vw;
   height: 95.8vh;
   transform: translate(-50%, -50%);
-  background-color: olive;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
 }
 .aside {
   width: 30%;
-  background-color: brown;
+  background-color: #ededed;
 }
 /* ↓ .header della sezione .aside ↓ */
 .aside__header {
@@ -101,6 +100,29 @@ html {
 .active-notifications__txt__link {
   font-size: 1.3rem;
   color: #456878;
+}
+.aside__header__searchbar {
+  margin: 0.5rem 0.5rem;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  background-color: #fff;
+}
+.searchbar__icon {
+  margin-right: 2rem;
+}
+.searchbar__input {
+  text-overflow: ellipsis;
+  flex-grow: 1;
+  border: none;
+}
+.searchbar__input:focus {
+  border: none;
+  outline: none;
+}
+.searchbar__input::placeholder {
+  color: #999999;
 }
 .primary {
   width: 70%;
