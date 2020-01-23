@@ -1,3 +1,4 @@
+/* ↓ Normalizzazione foglio di stile ↓ */
 * {
   margin: 0;
   padding: 0;
@@ -6,4 +7,25 @@
 }
 html {
   font-size: 10px;
+}
+
+.wrapper-page {
+  position: relative;
+}
+.background-page-top {
+  height: 12vh;
+  background-color: #00bba2;
+}
+.background-page-bottom {
+  height: 88vh;
+  background-color: #d5d6ce;
+}
+.page-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 95vh;
+  transform: translate(-50%, -50%);
+  background-color: olive;
 }
