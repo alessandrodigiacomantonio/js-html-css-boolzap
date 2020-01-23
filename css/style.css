@@ -7,6 +7,7 @@
 }
 html {
   font-size: 10px;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .image {
@@ -17,31 +18,35 @@ html {
 .icon {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .wrapper-page {
   position: relative;
-  min-width: 768px;
+  /* min-width: 768px; */
 }
+/* ↑ Normalizzazione foglio di stile ↑ */
+
+/* ↓ corpo del documento ↓ */
 .background-page-top {
-  height: 12vh;
-  background-color: #00bba2;
+  height: 13.6vh;
+  background-color: #009688;
 }
 .background-page-bottom {
-  height: 88vh;
+  height: 86.4vh;
   background-color: #d5d6ce;
 }
 .page-content {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 80%;
-  height: 95vh;
+  width: 72.7vw;
+  height: 95.8vh;
   transform: translate(-50%, -50%);
   background-color: olive;
   display: flex;
 }
 .aside {
-  width: calc(100% / 3);
+  width: 30%;
   background-color: brown;
 }
 /* ↓ .header della sezione .aside ↓ */
@@ -49,6 +54,7 @@ html {
   display: flex;
   flex-direction: column;
 }
+/* ↓ parte superiore dell'header, contiene i tools principali ↓ */
 .aside__header__my-panel {
   width: 100%;
   padding: 0.5rem 0.5rem;
@@ -57,9 +63,11 @@ html {
   justify-content: space-between;
 }
 .my-panel__profile {
-  width: 3rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 50%;
   overflow: hidden;
+  cursor: pointer;
 }
 .my-panel__control-tools {
   display: flex;
@@ -68,9 +76,31 @@ html {
 [class*="icon my-panel"]:not(:last-child) {
   margin-right: 1rem;
 }
+/* ↑ parte superiore dell'header, contiene i tools principali ↑ */
+
+.aside__header__activate-notifications {
+  width: 100%;
+  padding: 1rem 1rem;
+  background-color: #9de1fe;
+  display: flex;
+}
+.active-notifications__icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-right: 1rem;
+}
+.active-notifications__txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.active-notifications__txt__paragraph {
+  font-size: 1.5rem;
+}
 .primary {
-  width: calc((100%/3)*2);
+  width: 70%;
   background-image: url(../img/background-primarysection.jpg);
   background-position: center;
   background-size: 80%;
 }
+/* ↑ corpo del documento ↑ */
