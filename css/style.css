@@ -270,8 +270,8 @@ html {
   margin-right: 3rem;
 }
 .primary__main {
-  padding: 3rem 6rem;
-  height: 100%;
+  padding: 3rem 6rem 1rem;
+  height: calc(100% - 13.5rem);
   overflow-y: auto;
 }
 .primary__footer {
