@@ -318,9 +318,10 @@ html {
   border-radius: 50px;
   background-color: #fff;
 }
+
 /* ↑ corpo del documento ↑ */
 
-.template-message {
+.dis-none {
   display: none;
 }
 ::-webkit-scrollbar {
