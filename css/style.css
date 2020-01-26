@@ -34,17 +34,16 @@ html {
   background-color: #fff;
   font-size: 1.5rem;
   max-width: 45%;
+  cursor: default;
 }
-.message:after {
+.message__time {
   color: #aaa;
   font-size: 1rem;
-  content: "15:30";
   position: absolute;
   bottom: 0.5rem;
   right: 1rem;;
-
 }
-.message-send {
+[data-type="send"] {
   float: right;
   background-color: #dcf8c6;
 }
@@ -95,6 +94,7 @@ html {
 }
 .my-panel__profile {
   width: 4rem;
+  min-width: 4rem;
   height: 4rem;
   border-radius: 50%;
   overflow: hidden;
@@ -148,6 +148,7 @@ html {
   align-items: center;
   border-radius: 50px;
   background-color: #fff;
+  overflow: hidden;
 }
 .searchbar__icon {
   margin-right: 2rem;
@@ -175,6 +176,7 @@ html {
   flex-direction: column;
   flex-grow: 1;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 .aside__main__chat {
   padding: 1rem 1.5rem;
@@ -188,8 +190,13 @@ html {
 .aside__main__chat:hover {
   filter: brightness(0.95);
 }
+.aside__main__chat:hover .chat__actions__icon {
+  /* display: inline-block; */
+  transform: translatex(0);
+}
 .chat__profile {
   width: 5rem;
+  min-width: 5rem;
   height: 5rem;
   border-radius: 50%;
   overflow: hidden;
@@ -202,25 +209,40 @@ html {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  text-overflow: ellipsis;
+  overflow-x: hidden;
 }
 .chat__txt__name {
   font-size: 1.7rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .chat__txt__preview {
   font-size: 1.5rem;
   color: #aaa;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
 }
 .chat__actions {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-self: flex-start;
+  padding-top: 0.55rem;
 }
 .chat__actions__time {
   margin-bottom: 0.5rem;
   color: #aaa;
+}
+.chat__actions__icon {
+  /* display: none; */
+  position: relative;
+  transform: translatex(250%);
+  transition: 0.2s;
 }
 /* ↑ .main della sezione .aside ↑ */
 
@@ -241,6 +263,7 @@ html {
 }
 .header__profile {
   width: 4rem;
+  min-width: 4rem;
   height: 4rem;
   margin-right: 2rem;
   border-radius: 50%;
@@ -296,6 +319,9 @@ html {
 }
 /* ↑ corpo del documento ↑ */
 
+.template-message {
+  display: none;
+}
 ::-webkit-scrollbar {
   width: 0.5rem;
   background: transparent;
