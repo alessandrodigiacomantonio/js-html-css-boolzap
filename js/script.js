@@ -1,25 +1,38 @@
 $(document).ready(function() {
-  var input = $(".footer__searchbar > .searchbar__input");
-  input.on("keydown", function(event) {
-    if (event.keyCode === 13 && input.val().length != 0) {
+  var inputMessage = $(".footer__searchbar > .searchbar__inputMessage");
+  inputMessage.on("keydown", function(event) {
+    if (event.keyCode === 13 && inputMessage.val().length != 0) {
       event.preventDefault();
       newMessage();
     }
   });
   $('.footer__send').on('click', function() {
     newMessage();
-    input.focus();
+    inputMessage.focus();
   });
-  var hasMessageText = setInterval(function () {
-    if (input.val().length != 0) {
-      $('.footer__rec-voice').addClass('dis-none');
-      $('.footer__send').removeClass('dis-none');
 
-    } else {
-      $('.footer__send').addClass('dis-none');
-      $('.footer__rec-voice').removeClass('dis-none');
+  $(inputMessage).on('focus', function() {
+    var hasMessageText = setInterval(function () {
+      if (inputMessage.val().length != 0) {
+        $('.footer__rec-voice').addClass('dis-none');
+        $('.footer__send').removeClass('dis-none');
+
+      } else {
+        $('.footer__send').addClass('dis-none');
+        $('.footer__rec-voice').removeClass('dis-none');
+      }
+    },100);
+  });
+  var inputName = $('.aside__header__searchbar').find('.searchbar__input');
+  inputName.on('keydown', function () {
+    for (var i = 0; i < $('.aside__main').children().length ; i++) {
+      if( $('.aside__main > *:nth-of-type('+(i+1)+')').attr('data-name').includes(inputName.val().toLowerCase()) ) {
+        $('.aside__main > *:nth-of-type('+(i+1)+')').removeClass('dis-none');
+      } else $('.aside__main > *:nth-of-type('+(i+1)+')').addClass('dis-none')
     }
-  },100);
+    // console.log( $('.aside__main > *:nth-of-type('+(contatore+1)+')').attr('data-name') );
+    // console.log($('.aside__main > *:nth-of-type('+(contatore+1)+')'));
+  });
   function newMessage() {
     var newMessage = $(".footer__searchbar > .searchbar__input").val();
     $(".footer__searchbar > .searchbar__input").val("");

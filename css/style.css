@@ -192,7 +192,6 @@ html {
   filter: brightness(0.95);
 }
 .aside__main__chat:hover .chat__actions__icon {
-  /* display: inline-block; */
   transform: translatex(0);
 }
 .chat__profile {
