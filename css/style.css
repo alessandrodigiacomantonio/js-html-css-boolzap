@@ -159,6 +159,7 @@ html {
   border: none;
   font-size: 1.4rem;
   color: #aaa;
+  overflow-x: hidden;
 }
 .searchbar__input:focus {
   border: none;
