@@ -24,14 +24,29 @@ $(document).ready(function() {
     },100);
   });
   var inputName = $('.aside__header__searchbar').find('.searchbar__input');
-  inputName.on('keydown', function () {
-    for (var i = 0; i < $('.aside__main').children().length ; i++) {
-      if( $('.aside__main > *:nth-of-type('+(i+1)+')').attr('data-name').includes(inputName.val().toLowerCase()) ) {
-        $('.aside__main > *:nth-of-type('+(i+1)+')').removeClass('dis-none');
-      } else $('.aside__main > *:nth-of-type('+(i+1)+')').addClass('dis-none')
-    }
-    // console.log( $('.aside__main > *:nth-of-type('+(contatore+1)+')').attr('data-name') );
-    // console.log($('.aside__main > *:nth-of-type('+(contatore+1)+')'));
+  $(inputName).on('focus', function() {
+    inputName.on('keyup', function () {
+      var arrayInputName = [];
+      var arrayDataName = [];
+      for (var i = 0; i < inputName.val().toLowerCase().length; i++) {
+      arrayInputName[i] = inputName.val().toLowerCase()[i];
+      }
+      var filteredInputName = arrayInputName.filter(match);
+      function match(element) {
+        return element!= ' ' && element!= '-';
+      }
+      filteredInputName = filteredInputName.join('').toString();
+      for (var i = 0; i < $('.aside__main').children().length ; i++) {
+        for (var j = 0; j < $('.aside__main > *:nth-of-type('+(i+1)+')').attr('data-name').length; j++) {
+          arrayDataName[j] = $('.aside__main > *:nth-of-type('+(i+1)+')').attr('data-name')[j];
+        }
+        var filteredDataName = arrayDataName.filter(match);
+        filteredDataName = filteredDataName.join('').toString();
+        if( filteredDataName.includes(filteredInputName) ) {
+          $('.aside__main > *:nth-of-type('+(i+1)+')').removeClass('dis-none');
+        } else $('.aside__main > *:nth-of-type('+(i+1)+')').addClass('dis-none')
+      }
+    });
   });
   function newMessage() {
     var newMessage = $(".footer__searchbar > .searchbar__input").val();
