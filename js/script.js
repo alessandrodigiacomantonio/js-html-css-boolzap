@@ -90,7 +90,7 @@ $(document).ready(function() {
 
   // ↓ funzione che inserisce un nuovo messaggio nella chat attiva ↓
   function newMessage() {
-    $(document).ready(function() {
+    // $(document).ready(function() {
       var newMessage = $(".footer__searchbar > .searchbar__input").val();
       $(".footer__searchbar > .searchbar__input").val("");
       var templateMessage = $(".template-message").find('.clearfix').clone();
@@ -113,7 +113,7 @@ $(document).ready(function() {
         $('.chats-list__chat.active').append(templateMessage);
         $('.primary__main').scrollTop(scrollbarHeight);
       },1*1000);
-    });
+    // });
   }
 
 // ↑ ------ Funzioni ------- ↑
