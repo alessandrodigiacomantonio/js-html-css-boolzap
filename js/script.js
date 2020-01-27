@@ -16,11 +16,26 @@ $(document).ready(function() {
       if ($(this).hasClass('active')) {
         $(this).toggleClass('active');
         // $('.primary__cover').removeClass('dis-none');
+        var chatName = $(this).attr('data-name');
+        $('.chats-list__chat').each(function() {
+          if ( $(this).attr('data-name') == chatName ) {
+            $(this).toggleClass('active dis-none');
+          }
+        });
       }
       else {
         $('.aside__main__chat').removeClass('active');
         $(this).toggleClass('active');
         // $('.primary__cover').addClass('dis-none');
+        var chatName = $(this).attr('data-name');
+        $('.chats-list_chats').each(function() {
+          $(this).removeClass('active');
+        });
+        $('.chats-list__chat').each(function() {
+          if ( $(this).attr('data-name') == chatName ) {
+            $(this).toggleClass('active dis-none');
+          }
+        });
       }
 
     });
