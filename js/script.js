@@ -12,6 +12,18 @@ $(document).ready(function() {
       inputMessage.focus();
     });
 
+    $('.aside__main__chat').on('click', function() {
+      if ($(this).hasClass('active')) {
+        $(this).toggleClass('active');
+        // $('.primary__cover').removeClass('dis-none');
+      }
+      else {
+        $('.aside__main__chat').removeClass('active');
+        $(this).toggleClass('active');
+        // $('.primary__cover').addClass('dis-none');
+      }
+
+    });
   // ↑ eventi on.click ↑
 
   // ↓ eventi on.focus ↓
