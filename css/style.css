@@ -35,6 +35,10 @@ html {
   font-size: 1.5rem;
   max-width: 45%;
   cursor: default;
+  overflow-x: hidden;
+}
+.message:hover .message__icon{
+  transform: translatex(0);
 }
 .message__time {
   color: #aaa;
@@ -42,6 +46,21 @@ html {
   position: absolute;
   bottom: 0.5rem;
   right: 1rem;;
+}
+.message__icon {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  transform: translatex(250%);
+  transition: 0.2s;
+}
+.--send {
+  box-shadow: 0px 0px 10px 10px rgba(220,	248, 198, 1);
+  background-color: rgba(220,	248, 198, 1);
+}
+.--receive {
+  box-shadow: 0px 0px 10px 10px #fff;
+  background-color: #fff;
 }
 [data-type="send"] {
   float: right;
