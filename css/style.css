@@ -68,12 +68,17 @@ html {
   top: 0%;
   left: 50%;
   transform: translate(-50%, 30%);
+  border-radius: 2rem;
+  filter:drop-shadow(2px 2px 5px rgba(0,0,0,0.2));
   padding: 0.5rem 3rem;
   white-space: nowrap;
-  background-color: brown;
 }
 .message__dropdown__item {
   padding: 2rem;
+  background-color: #fff;
+}
+.message__dropdown__item:hover {
+  filter:brightness(0.95);
 }
 [data-type="send"] {
   float: right;
