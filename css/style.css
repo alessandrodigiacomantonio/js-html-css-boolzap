@@ -49,7 +49,7 @@ html {
 }
 .wrapper-page {
   position: relative;
-  /* min-width: 768px; */
+  min-width: 85rem;
 }
 /* ↑ Normalizzazione foglio di stile ↑ */
 
@@ -67,6 +67,7 @@ html {
   top: 50%;
   left: 50%;
   width: 72.7vw;
+  min-width: calc(85rem - 27.3%);
   height: 95.8vh;
   transform: translate(-50%, -50%);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
@@ -297,6 +298,9 @@ html {
   height: calc(100% - 13.5rem);
   overflow-y: auto;
 }
+.primary__main__chats-list {
+  list-style: none;
+}
 .primary__footer {
   position: absolute;
   bottom: 0;
@@ -316,6 +320,7 @@ html {
   align-items: center;
   border-radius: 50px;
   background-color: #fff;
+  overflow-x: hidden;
 }
 
 /* ↑ corpo del documento ↑ */

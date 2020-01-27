@@ -1,5 +1,7 @@
 $(document).ready(function() {
-  var inputMessage = $(".footer__searchbar > .searchbar__inputMessage");
+  var inputMessage = $(".footer__searchbar > .searchbar__input");
+  var inputName = $('.aside__header__searchbar').find('.searchbar__input');
+
   inputMessage.on("keydown", function(event) {
     if (event.keyCode === 13 && inputMessage.val().length != 0) {
       event.preventDefault();
@@ -11,7 +13,7 @@ $(document).ready(function() {
     inputMessage.focus();
   });
 
-  $(inputMessage).on('focus', function() {
+  inputMessage.on('focus', function() {
     var hasMessageText = setInterval(function () {
       if (inputMessage.val().length != 0) {
         $('.footer__rec-voice').addClass('dis-none');
@@ -23,8 +25,8 @@ $(document).ready(function() {
       }
     },100);
   });
-  var inputName = $('.aside__header__searchbar').find('.searchbar__input');
-  $(inputName).on('focus', function() {
+
+  inputName.on('focus', function() {
     inputName.on('keyup', function () {
       var arrayInputName = [];
       var arrayDataName = [];
@@ -48,7 +50,10 @@ $(document).ready(function() {
       }
     });
   });
-  function newMessage() {
+
+});
+function newMessage() {
+  $(document).ready(function() {
     var newMessage = $(".footer__searchbar > .searchbar__input").val();
     $(".footer__searchbar > .searchbar__input").val("");
     var templateMessage = $(".template-message").find('.clearfix').clone();
@@ -60,16 +65,16 @@ $(document).ready(function() {
     if ( minutes < 10 ) minutes = '0'+minutes;
     date = hours+':'+minutes;
     templateMessage.find('.message__time').text(date);
-    $('.primary__main').append(templateMessage);
-    var scrollbar = $(".primary__main");
-    scrollbar.scrollTop(10000);
+    $('.chats-list__chat.active').append(templateMessage);
+    var scrollbar = $(".primary__main__chats-list");
+    var scrollbarHeight = scrollbar.height();
+    $('.primary__main').scrollTop(scrollbarHeight);
     var timer = setTimeout(function () {
       var templateMessage = $(".template-message").find('.clearfix').clone();
       templateMessage.children().attr('data-type','receive').children('.message__txt').text('Øk');
       templateMessage.find('.message__time').text(date);
-      $('.primary__main').append(templateMessage);
-      var element = $(".primary__main");
-      element.scrollTop(10000);
+      $('.chats-list__chat.active').append(templateMessage);
+      $('.primary__main').scrollTop(scrollbarHeight);
     },1*1000);
-  }
-});
+  });
+}
