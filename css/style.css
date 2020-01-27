@@ -36,6 +36,7 @@ html {
   max-width: 45%;
   cursor: default;
   overflow-x: hidden;
+  word-wrap: break-word;
 }
 .message:hover .message__icon{
   transform: translatex(0);
