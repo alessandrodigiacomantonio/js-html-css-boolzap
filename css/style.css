@@ -35,7 +35,7 @@ html {
   font-size: 1.5rem;
   max-width: 45%;
   cursor: default;
-  overflow-x: hidden;
+  overflow-y: visible;
   word-wrap: break-word;
 }
 .message:hover .message__icon{
@@ -56,12 +56,24 @@ html {
   transition: 0.2s;
 }
 .--send {
-  box-shadow: 0px 0px 10px 10px rgba(220,	248, 198, 1);
+  box-shadow: -10px 5px 10px 1px rgba(220,	248, 198, 1);
   background-color: rgba(220,	248, 198, 1);
 }
 .--receive {
-  box-shadow: 0px 0px 10px 10px #fff;
+  box-shadow: -10px 5px 10px 1px #fff;
   background-color: #fff;
+}
+.message__dropdown {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 30%);
+  padding: 0.5rem 3rem;
+  white-space: nowrap;
+  background-color: brown;
+}
+.message__dropdown__item {
+  padding: 2rem;
 }
 [data-type="send"] {
   float: right;
@@ -317,6 +329,7 @@ html {
   padding: 3rem 6rem 1rem;
   height: calc(100% - 13.5rem);
   overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
 }
 .primary__main__cover {
@@ -364,6 +377,9 @@ html {
 
 .dis-none {
   display: none;
+}
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 ::-webkit-scrollbar {
   width: 0.5rem;

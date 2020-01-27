@@ -10,6 +10,8 @@ $(document).ready(function() {
     $('.footer__send').on('click', function() {
       newMessage();
       inputMessage.focus();
+      $(this).addClass('dis-none');
+      $(this).siblings().removeClass('dis-none');
     });
 
     // ↓ in questo modo, appariranno sul display, solo i messaggi della conversazione selezionata 8attiva) ↓
@@ -40,6 +42,9 @@ $(document).ready(function() {
         }
     });
 
+    $(document).on('click', '.message__icon', function() {
+      $(this).parent().removeClass('overflow-x-hidden').find('.message__dropdown').toggleClass('dis-none');
+    });
   // ↑ eventi on.click ↑
 
   // ↓ eventi on.focus ↓
@@ -91,6 +96,10 @@ $(document).ready(function() {
 
 });
 
+  // ↓ eventi on.mouseleave ↓
+    $(document).on('mouseleave', '.message', function() {
+      $(this).addClass('overflow-x-hidden').find('.message__dropdown').addClass('dis-none');
+    });
 // ↓ ----- Funzioni ----- ↓
 
   // ↓ funzione che inserisce un nuovo messaggio nella chat attiva ↓
