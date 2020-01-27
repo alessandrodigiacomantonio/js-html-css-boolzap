@@ -12,6 +12,7 @@ $(document).ready(function() {
       inputMessage.focus();
     });
 
+    // ↓ in questo modo, appariranno sul display, solo i messaggi della conversazione selezionata 8attiva) ↓
     $('.aside__main__chat').on('click', function() {
       if ($(this).hasClass('active')) {
         $(this).removeClass('active');
@@ -35,6 +36,7 @@ $(document).ready(function() {
           });
         }
     });
+
   // ↑ eventi on.click ↑
 
   // ↓ eventi on.focus ↓
