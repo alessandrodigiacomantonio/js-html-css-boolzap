@@ -42,9 +42,16 @@ $(document).ready(function() {
         }
     });
 
+    // ↓ cliccando sulla chevron nel messaggio, spunta il dropdown ↓
     $(document).on('click', '.message__icon', function() {
       $(this).parent().removeClass('overflow-x-hidden').find('.message__dropdown').toggleClass('dis-none');
     });
+
+    // ↓ al click di 'Cancella Messaggio', questo, viene rimosso dal DOM
+    $(document).on('click', '.--delete-message', function() {
+      $(this).parents('.clearfix').remove();
+    });
+
   // ↑ eventi on.click ↑
 
   // ↓ eventi on.focus ↓
