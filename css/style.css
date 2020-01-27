@@ -297,6 +297,20 @@ html {
   padding: 3rem 6rem 1rem;
   height: calc(100% - 13.5rem);
   overflow-y: auto;
+  position: relative;
+}
+.primary__main__cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #009688;
+  display: flex;
+}
+.main__cover {
+  margin: auto;
+  filter: invert(0.1) drop-shadow(1px 3px 2px black);
 }
 .primary__main__chats-list {
   list-style: none;

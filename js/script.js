@@ -14,30 +14,26 @@ $(document).ready(function() {
 
     $('.aside__main__chat').on('click', function() {
       if ($(this).hasClass('active')) {
-        $(this).toggleClass('active');
-        // $('.primary__cover').removeClass('dis-none');
+        $(this).removeClass('active');
+        $('.primary__main__cover').toggleClass('dis-none');
         var chatName = $(this).attr('data-name');
         $('.chats-list__chat').each(function() {
           if ( $(this).attr('data-name') == chatName ) {
             $(this).toggleClass('active dis-none');
           }
         });
-      }
-      else {
-        $('.aside__main__chat').removeClass('active');
-        $(this).toggleClass('active');
-        // $('.primary__cover').addClass('dis-none');
-        var chatName = $(this).attr('data-name');
-        $('.chats-list_chats').each(function() {
-          $(this).removeClass('active');
-        });
-        $('.chats-list__chat').each(function() {
-          if ( $(this).attr('data-name') == chatName ) {
-            $(this).toggleClass('active dis-none');
-          }
-        });
-      }
-
+      } else {
+          $('.aside__main__chat').removeClass('active');
+          $(this).addClass('active');
+          $('.primary__main__cover').addClass('dis-none');
+          var chatName = $(this).attr('data-name');
+          $('.primary__main__chats-list > *').removeClass('active').addClass('dis-none');
+          $('.chats-list__chat').each(function() {
+            if ( $(this).attr('data-name') == chatName ) {
+              $(this).toggleClass('active dis-none');
+            }
+          });
+        }
     });
   // ↑ eventi on.click ↑
 
