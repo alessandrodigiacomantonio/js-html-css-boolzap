@@ -20,7 +20,7 @@ $(document).ready(function() {
     $('.aside__main__chat').on('click', function() {
       if ($(this).hasClass('active')) {
         $(this).removeClass('active');
-        $('.primary__main__cover').toggleClass('dis-none');
+        $('.primary__cover').toggleClass('dis-none');
         var chatName = $(this).attr('data-name');
         $('.chats-list__chat').each(function() {
           if ( $(this).attr('data-name') == chatName ) {
@@ -30,7 +30,7 @@ $(document).ready(function() {
       } else {
           $('.aside__main__chat').removeClass('active');
           $(this).addClass('active');
-          $('.primary__main__cover').addClass('dis-none');
+          $('.primary__cover').addClass('dis-none');
           var chatName = $(this).attr('data-name');
           $('.primary__main__chats-list > *').removeClass('active').addClass('dis-none');
           $('.chats-list__chat').each(function() {
