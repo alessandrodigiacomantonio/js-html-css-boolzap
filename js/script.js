@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
-  setTimeout(function() {
-    $('.boolean').remove();
-  },3*1000);
+  // setTimeout(function() {
+  //   $('.boolean').remove();
+  // },6*1000);
   var inputMessage = $(".footer__searchbar > .searchbar__input");
   var inputName = $('.aside__header__searchbar').find('.searchbar__input');
 

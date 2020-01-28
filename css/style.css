@@ -20,14 +20,19 @@ html {
   opacity: 1;
   z-index: 3;
   display: flex;
-  animation-name: disappears;
+  animation-name: height;
   animation-duration: 2s;
   animation-fill-mode: forwards;
-  animation-delay: 1s;
+  animation-delay: 2.8s;
+  animation-timing-function: cubic-bezier(0,0,.40,1);
 }
 .boolean__logo {
   margin: auto;
   filter: invert(0.1) drop-shadow(1px 3px 2px black);
+  animation-name: disappears;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
 }
 
 .image {
@@ -424,5 +429,13 @@ html {
   }
   to {
     opacity: 0;
+  }
+}
+@keyframes height {
+  from{
+    height: 100%;
+  }
+  to {
+    height: 0;
   }
 }
