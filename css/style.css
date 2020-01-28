@@ -50,10 +50,11 @@ html {
 }
 .message__icon {
   position: absolute;
-  top: 10%;
-  right: 5%;
+  top: 1.5rem;
+  right: 1.25rem;
   transform: translatex(250%);
   transition: 0.2s;
+  z-index: 1;
 }
 .--send {
   box-shadow: -10px 5px 10px 1px rgba(220,	248, 198, 1);
@@ -72,6 +73,7 @@ html {
   filter:drop-shadow(2px 2px 5px rgba(0,0,0,0.2));
   padding: 0.5rem 3rem;
   white-space: nowrap;
+  z-index: 2;
 }
 .message__dropdown__item {
   padding: 2rem;
