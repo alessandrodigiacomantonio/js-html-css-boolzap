@@ -1,10 +1,12 @@
 $(document).ready(function() {
 
+  var inputMessage = $(".footer__searchbar > .searchbar__input");
+  var inputName = $('.aside__header__searchbar').find('.searchbar__input');
+
+  // ↓ timing function che rimuove l'intro "boolean" dopo che è stata completata l'animaizone
   setTimeout(function() {
     $('.boolean').remove();
   },6*1000);
-  var inputMessage = $(".footer__searchbar > .searchbar__input");
-  var inputName = $('.aside__header__searchbar').find('.searchbar__input');
 
   // ↓ eventi on.click ↓
 
@@ -16,7 +18,7 @@ $(document).ready(function() {
       $(this).siblings().removeClass('dis-none');
     });
 
-    // ↓ in questo modo, appariranno sul display, solo i messaggi della conversazione selezionata 8attiva) ↓
+    // ↓ in questo modo, appariranno sul display, solo i messaggi della conversazione selezionata ↓
     $('.aside__main__chat').on('click', function() {
       if ($(this).hasClass('active')) {
         $(this).removeClass('active');
@@ -42,6 +44,11 @@ $(document).ready(function() {
           var scrollbarHeight = scrollbar.height();
           $('.primary__main').scrollTop(scrollbarHeight);
         }
+      var immagine = $(this).find('.image').attr('src');
+      console.log( $(this).attr('title') );
+      console.log( $('.header__txt__name').text() );
+      $('.header__profile .image').attr('src',  $(this).find('.image').attr('src') );
+      $('.header__txt__name').text( $(this).attr('title') );
     });
 
     // ↓ cliccando sulla chevron nel messaggio, spunta il dropdown ↓
