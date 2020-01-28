@@ -44,9 +44,6 @@ $(document).ready(function() {
           var scrollbarHeight = scrollbar.height();
           $('.primary__main').scrollTop(scrollbarHeight);
         }
-      var immagine = $(this).find('.image').attr('src');
-      console.log( $(this).attr('title') );
-      console.log( $('.header__txt__name').text() );
       $('.header__profile .image').attr('src',  $(this).find('.image').attr('src') );
       $('.header__txt__name').text( $(this).attr('title') );
     });
