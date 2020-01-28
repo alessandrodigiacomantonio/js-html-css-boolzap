@@ -10,6 +10,26 @@ html {
   font-family: 'Lato', sans-serif;
 }
 
+.boolean {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #009688;
+  opacity: 1;
+  z-index: 3;
+  display: flex;
+  animation-name: disappears;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+.boolean__logo {
+  margin: auto;
+  filter: invert(0.1) drop-shadow(1px 3px 2px black);
+}
+
 .image {
   width: 100%;
   border-radius: 50%;
@@ -339,7 +359,7 @@ html {
   overflow-x: hidden;
   position: relative;
 }
-.primary__main__cover {
+.primary__cover {
   position: absolute;
   top: 0;
   left: 0;
@@ -349,10 +369,11 @@ html {
   z-index: 2;
   display: flex;
 }
-.main__cover {
+.cover__image {
   margin: auto;
-  /* filter: invert(0.1) drop-shadow(1px 3px 2px black); */
+  width: 100%;
 }
+
 .primary__main__chats-list {
   list-style: none;
 }
@@ -395,4 +416,13 @@ html {
 }
 ::-webkit-scrollbar-thumb {
   background-color: #bbb;
+}
+
+@keyframes disappears {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
