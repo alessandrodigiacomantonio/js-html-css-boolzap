@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta property="og:title" content="Whatsapp Web">
+  <meta property="og:description" content="Sviluppo di un layout simile alla HomePage di un utente nella web app Whatsapp Web">
+  <meta property="og:image" content="https://alessandrodigiacomantonio.github.io/js-html-css-boolzap/img/anteprima.jpeg">
+  <meta property="og:url" content="https://alessandrodigiacomantonio.github.io/js-html-css-boolzap">
+  <meta name="author" content="Alessandro Di Giacomantonio">
   <!-- ↓ libreria jquery ↓ -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <!-- ↓ foglio di script principale ↓ -->
@@ -11,7 +16,7 @@
   <link rel="icon" href="img/icona-whatsapp.png">
   <!-- ↓ libreria font-awesome ↓ -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
-  <!-- ↓google-fonts:: font-family: Lato 400,700  -->
+  <!-- ↓ google-fonts: font-family: Lato 400,700  -->
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
   <!-- ↓ foglio di stile principale ↓ -->
   <link rel="stylesheet" href="css/style.css">
@@ -310,141 +315,281 @@
             <ul class="primary__main__chats-list">
               <li class="chats-list__chat dis-none" data-name="alessandro-sainato0">
                 <div class="clearfix">
-                  <div class="message" data-type="send">
+                  <div class="message overflow-x-hidden" data-type="send">
                     <p class="message__txt">Ciao Ale, nel codice ho inserito un div, dentro una li, cosa ne pensi?</p>
+                    <span class="icon message__icon --sent">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="21" height="21"><path fill="#263238" fill-opacity=".33" d="M4.8 6.1l5.7 5.7 5.7-5.7 1.6 1.6-7.3 7.2-7.3-7.2 1.6-1.6z"></path></svg>
+                      <div class="message__dropdown dis-none">
+                        <p class="message__dropdown__item --info-message">Info Messaggio</p>
+                        <p class="message__dropdown__item --delete-message">Cancella Messaggio</p>
+                      </div>
+                    </span>
                     <time class="message__time">15:15</time>
                   </div>
                 </div>
                 <div class="clearfix">
-                  <div class="message" data-type="receive">
+                  <div class="message overflow-x-hidden" data-type="receive">
                     <p class="message__txt">Quel div che hai inserito è pleonastico</p>
                     <time class="message__time">15:30</time>
+                    <span class="icon message__icon --received">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="21" height="21"><path fill="#263238" fill-opacity=".33" d="M4.8 6.1l5.7 5.7 5.7-5.7 1.6 1.6-7.3 7.2-7.3-7.2 1.6-1.6z"></path></svg>
+                      <div class="message__dropdown dis-none">
+                        <p class="message__dropdown__item --info-message">Info Messaggio</p>
+                        <p class="message__dropdown__item --delete-message">Cancella Messaggio</p>
+                      </div>
+                    </span>
                   </div>
                 </div>
               </li>
               <li class="chats-list__chat dis-none" data-name="chiara-passaro0">
                 <div class="clearfix">
-                  <div class="message" data-type="send">
+                  <div class="message overflow-x-hidden" data-type="send">
                     <p class="message__txt">Ciao Chiara, ma se abbandonassi tutto e rimasessi nella mia ignoranza?</p>
+                    <span class="icon message__icon --sent">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="21" height="21"><path fill="#263238" fill-opacity=".33" d="M4.8 6.1l5.7 5.7 5.7-5.7 1.6 1.6-7.3 7.2-7.3-7.2 1.6-1.6z"></path></svg>
+                      <div class="message__dropdown dis-none">
+                        <p class="message__dropdown__item --info-message">Info Messaggio</p>
+                        <p class="message__dropdown__item --delete-message">Cancella Messaggio</p>
+                      </div>
+                    </span>
                     <time class="message__time">15:20</time>
                   </div>
                 </div>
                 <div class="clearfix">
-                  <div class="message" data-type="receive">
+                  <div class="message overflow-x-hidden" data-type="receive">
                     <p class="message__txt">Fatti non foste a viver come bruti, ma per seguir virtuti e canoscenza</p>
+                    <span class="icon message__icon --received">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="21" height="21"><path fill="#263238" fill-opacity=".33" d="M4.8 6.1l5.7 5.7 5.7-5.7 1.6 1.6-7.3 7.2-7.3-7.2 1.6-1.6z"></path></svg>
+                      <div class="message__dropdown dis-none">
+                        <p class="message__dropdown__item --info-message">Info Messaggio</p>
+                        <p class="message__dropdown__item --delete-message">Cancella Messaggio</p>
+                      </div>
+                    </span>
                     <time class="message__time">15:30</time>
                   </div>
                 </div>
               </li>
               <li class="chats-list__chat dis-none" data-name="roberto-marazzini0">
                 <div class="clearfix">
-                  <div class="message" data-type="send">
+                  <div class="message overflow-x-hidden" data-type="send">
                     <p class="message__txt">Ciao Roberto, ma sai che hai un viso conosciuto?</p>
                     <time class="message__time">16:21</time>
+                    <span class="icon message__icon --sent">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="21" height="21"><path fill="#263238" fill-opacity=".33" d="M4.8 6.1l5.7 5.7 5.7-5.7 1.6 1.6-7.3 7.2-7.3-7.2 1.6-1.6z"></path></svg>
+                      <div class="message__dropdown dis-none">
+                        <p class="message__dropdown__item --info-message">Info Messaggio</p>
+                        <p class="message__dropdown__item --delete-message">Cancella Messaggio</p>
+                      </div>
+                    </span>
                   </div>
                 </div>
                 <div class="clearfix">
-                  <div class="message" data-type="receive">
+                  <div class="message overflow-x-hidden" data-type="receive">
                     <p class="message__txt">Sìsì, lo so, somiglio a Nicolas Cage</p>
                     <time class="message__time">16:22</time>
+                    <span class="icon message__icon --received">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="21" height="21"><path fill="#263238" fill-opacity=".33" d="M4.8 6.1l5.7 5.7 5.7-5.7 1.6 1.6-7.3 7.2-7.3-7.2 1.6-1.6z"></path></svg>
+                      <div class="message__dropdown dis-none">
+                        <p class="message__dropdown__item --info-message">Info Messaggio</p>
+                        <p class="message__dropdown__item --delete-message">Cancella Messaggio</p>
+                      </div>
+                    </span>
                   </div>
                 </div>
               </li>
               <li class="chats-list__chat dis-none" data-name="michele-papagni0">
                 <div class="clearfix">
-                  <div class="message" data-type="send">
+                  <div class="message overflow-x-hidden" data-type="send">
                     <p class="message__txt">Ciao Michele, è un po' che faccio più fatica a comprendere le cose, è normale?</p>
+                    <span class="icon message__icon --sent">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="21" height="21"><path fill="#263238" fill-opacity=".33" d="M4.8 6.1l5.7 5.7 5.7-5.7 1.6 1.6-7.3 7.2-7.3-7.2 1.6-1.6z"></path></svg>
+                      <div class="message__dropdown dis-none">
+                        <p class="message__dropdown__item --info-message">Info Messaggio</p>
+                        <p class="message__dropdown__item --delete-message">Cancella Messaggio</p>
+                      </div>
+                    </span>
                     <time class="message__time">11:50</time>
                   </div>
                 </div>
                 <div class="clearfix">
-                  <div class="message" data-type="receive">
+                  <div class="message overflow-x-hidden" data-type="receive">
                     <p class="message__txt">&Egrave; normale, adesso siete nella fase ripida di apprendimento</p>
+                    <span class="icon message__icon --received">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="21" height="21"><path fill="#263238" fill-opacity=".33" d="M4.8 6.1l5.7 5.7 5.7-5.7 1.6 1.6-7.3 7.2-7.3-7.2 1.6-1.6z"></path></svg>
+                      <div class="message__dropdown dis-none">
+                        <p class="message__dropdown__item --info-message">Info Messaggio</p>
+                        <p class="message__dropdown__item --delete-message">Cancella Messaggio</p>
+                      </div>
+                    </span>
                     <time class="message__time">16:21</time>
                   </div>
                 </div>
               </li>
               <li class="chats-list__chat dis-none" data-name="fabio-forghieri0">
                 <div class="clearfix">
-                  <div class="message" data-type="send">
+                  <div class="message overflow-x-hidden" data-type="send">
                     <p class="message__txt">Lo &egrave; lo studente...</p>
                     <time class="message__time">12:53</time>
+                    <span class="icon message__icon --sent">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="21" height="21"><path fill="#263238" fill-opacity=".33" d="M4.8 6.1l5.7 5.7 5.7-5.7 1.6 1.6-7.3 7.2-7.3-7.2 1.6-1.6z"></path></svg>
+                      <div class="message__dropdown dis-none">
+                        <p class="message__dropdown__item --info-message">Info Messaggio</p>
+                        <p class="message__dropdown__item --delete-message">Cancella Messaggio</p>
+                      </div>
+                    </span>
                   </div>
                 </div>
                 <div class="clearfix">
-                  <div class="message" data-type="receive">
+                  <div class="message overflow-x-hidden" data-type="receive">
                     <p class="message__txt">Caro studente</p>
                     <time class="message__time">01:31</time>
+                    <span class="icon message__icon --received">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="21" height="21"><path fill="#263238" fill-opacity=".33" d="M4.8 6.1l5.7 5.7 5.7-5.7 1.6 1.6-7.3 7.2-7.3-7.2 1.6-1.6z"></path></svg>
+                      <div class="message__dropdown dis-none">
+                        <p class="message__dropdown__item --info-message">Info Messaggio</p>
+                        <p class="message__dropdown__item --delete-message">Cancella Messaggio</p>
+                      </div>
+                    </span>
                   </div>
                 </div>
               </li>
               <li class="chats-list__chat dis-none" data-name="tina-pregara0">
                 <div class="clearfix">
-                  <div class="message" data-type="receive">
+                  <div class="message overflow-x-hidden" data-type="receive">
                     <p class="message__txt">Ciao Ragazzi, andate a controllare il nuovo "Ti accompagno a lavoro", grazie!</p>
+                    <span class="icon message__icon --received">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="21" height="21"><path fill="#263238" fill-opacity=".33" d="M4.8 6.1l5.7 5.7 5.7-5.7 1.6 1.6-7.3 7.2-7.3-7.2 1.6-1.6z"></path></svg>
+                      <div class="message__dropdown dis-none">
+                        <p class="message__dropdown__item --info-message">Info Messaggio</p>
+                        <p class="message__dropdown__item --delete-message">Cancella Messaggio</p>
+                      </div>
+                    </span>
                     <time class="message__time">9:58</time>
                   </div>
                 </div>
                 <div class="clearfix">
-                  <div class="message" data-type="send">
+                  <div class="message overflow-x-hidden" data-type="send">
                     <p class="message__txt">E sia!</p>
                     <time class="message__time">13.00</time>
+                    <span class="icon message__icon --sent">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="21" height="21"><path fill="#263238" fill-opacity=".33" d="M4.8 6.1l5.7 5.7 5.7-5.7 1.6 1.6-7.3 7.2-7.3-7.2 1.6-1.6z"></path></svg>
+                      <div class="message__dropdown dis-none">
+                        <p class="message__dropdown__item --info-message">Info Messaggio</p>
+                        <p class="message__dropdown__item --delete-message">Cancella Messaggio</p>
+                      </div>
+                    </span>
                   </div>
                 </div>
               </li>
               <li class="chats-list__chat dis-none" data-name="veronica-facheris0">
                 <div class="clearfix">
-                  <div class="message" data-type="receive">
+                  <div class="message overflow-x-hidden" data-type="receive">
                     <p class="message__txt">Sei ufficialmente uno Studente Boolean!</p>
                     <time class="message__time">17:65</time>
+                    <span class="icon message__icon --received">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="21" height="21"><path fill="#263238" fill-opacity=".33" d="M4.8 6.1l5.7 5.7 5.7-5.7 1.6 1.6-7.3 7.2-7.3-7.2 1.6-1.6z"></path></svg>
+                      <div class="message__dropdown dis-none">
+                        <p class="message__dropdown__item --info-message">Info Messaggio</p>
+                        <p class="message__dropdown__item --delete-message">Cancella Messaggio</p>
+                      </div>
+                    </span>
                   </div>
                 </div>
                 <div class="clearfix">
-                  <div class="message" data-type="send">
+                  <div class="message overflow-x-hidden" data-type="send">
                     <p class="message__txt">Grazie!! Penso ci sia un problema con l'orario però</p>
                     <time class="message__time">25:-21</time>
+                    <span class="icon message__icon --sent">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="21" height="21"><path fill="#263238" fill-opacity=".33" d="M4.8 6.1l5.7 5.7 5.7-5.7 1.6 1.6-7.3 7.2-7.3-7.2 1.6-1.6z"></path></svg>
+                      <div class="message__dropdown dis-none">
+                        <p class="message__dropdown__item --info-message">Info Messaggio</p>
+                        <p class="message__dropdown__item --delete-message">Cancella Messaggio</p>
+                      </div>
+                    </span>
                   </div>
                 </div>
               </li>
               <li class="chats-list__chat dis-none" data-name="alessandro-lausdei0">
                 <div class="clearfix">
-                  <div class="message" data-type="send">
+                  <div class="message overflow-x-hidden" data-type="send">
                     <p class="message__txt">Ciao Ale, puoi scrivermi: "Anche io ero uno studente Boolean" ? Grazie</p>
+                    <span class="icon message__icon --sent">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="21" height="21"><path fill="#263238" fill-opacity=".33" d="M4.8 6.1l5.7 5.7 5.7-5.7 1.6 1.6-7.3 7.2-7.3-7.2 1.6-1.6z"></path></svg>
+                      <div class="message__dropdown dis-none">
+                        <p class="message__dropdown__item --info-message">Info Messaggio</p>
+                        <p class="message__dropdown__item --delete-message">Cancella Messaggio</p>
+                      </div>
+                    </span>
                     <time class="message__time">14:21</time>
                   </div>
                 </div>
                 <div class="clearfix">
-                  <div class="message" data-type="receive">
+                  <div class="message overflow-x-hidden" data-type="receive">
                     <p class="message__txt">Anche io ero uno studente Boolean</p>
                     <time class="message__time">19:29</time>
+                    <span class="icon message__icon --received">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="21" height="21"><path fill="#263238" fill-opacity=".33" d="M4.8 6.1l5.7 5.7 5.7-5.7 1.6 1.6-7.3 7.2-7.3-7.2 1.6-1.6z"></path></svg>
+                      <div class="message__dropdown dis-none">
+                        <p class="message__dropdown__item --info-message">Info Messaggio</p>
+                        <p class="message__dropdown__item --delete-message">Cancella Messaggio</p>
+                      </div>
+                    </span>
                   </div>
                 </div>
               </li>
               <li class="chats-list__chat dis-none" data-name="davide-voza0">
                 <div class="clearfix">
-                  <div class="message" data-type="send">
+                  <div class="message overflow-x-hidden" data-type="send">
                     <p class="message__txt">Ciao Davide, sei nuovo?</p>
                     <time class="message__time">16:20</time>
+                    <span class="icon message__icon --sent">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="21" height="21"><path fill="#263238" fill-opacity=".33" d="M4.8 6.1l5.7 5.7 5.7-5.7 1.6 1.6-7.3 7.2-7.3-7.2 1.6-1.6z"></path></svg>
+                      <div class="message__dropdown dis-none">
+                        <p class="message__dropdown__item --info-message">Info Messaggio</p>
+                        <p class="message__dropdown__item --delete-message">Cancella Messaggio</p>
+                      </div>
+                    </span>
                   </div>
                 </div>
                 <div class="clearfix">
-                  <div class="message" data-type="receive">
+                  <div class="message overflow-x-hidden" data-type="receive">
                     <p class="message__txt">Sono entrato da poco nella famiglia Boolean come insegnante</p>
+                    <span class="icon message__icon --received">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="21" height="21"><path fill="#263238" fill-opacity=".33" d="M4.8 6.1l5.7 5.7 5.7-5.7 1.6 1.6-7.3 7.2-7.3-7.2 1.6-1.6z"></path></svg>
+                      <div class="message__dropdown dis-none">
+                        <p class="message__dropdown__item --info-message">Info Messaggio</p>
+                        <p class="message__dropdown__item --delete-message">Cancella Messaggio</p>
+                      </div>
+                    </span>
                     <time class="message__time">18:28</time>
                   </div>
                 </div>
               </li>
               <li class="chats-list__chat dis-none" data-name="sofia-perlari0">
                 <div class="clearfix">
-                  <div class="message" data-type="send">
+                  <div class="message overflow-x-hidden" data-type="send">
                     <p class="message__txt">Ciao Sofia, in che classe insegni?</p>
                     <time class="message__time">18:11</time>
+                    <span class="icon message__icon --sent">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="21" height="21"><path fill="#263238" fill-opacity=".33" d="M4.8 6.1l5.7 5.7 5.7-5.7 1.6 1.6-7.3 7.2-7.3-7.2 1.6-1.6z"></path></svg>
+                      <div class="message__dropdown dis-none">
+                        <p class="message__dropdown__item --info-message">Info Messaggio</p>
+                        <p class="message__dropdown__item --delete-message">Cancella Messaggio</p>
+                      </div>
+                    </span>
                   </div>
                 </div>
                 <div class="clearfix">
-                  <div class="message" data-type="receive">
+                  <div class="message overflow-x-hidden" data-type="receive">
                     <p class="message__txt">Sono insegnante della classe#8</p>
                     <time class="message__time">08:49</time>
+                    <span class="icon message__icon --received">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" width="21" height="21"><path fill="#263238" fill-opacity=".33" d="M4.8 6.1l5.7 5.7 5.7-5.7 1.6 1.6-7.3 7.2-7.3-7.2 1.6-1.6z"></path></svg>
+                      <div class="message__dropdown dis-none">
+                        <p class="message__dropdown__item --info-message">Info Messaggio</p>
+                        <p class="message__dropdown__item --delete-message">Cancella Messaggio</p>
+                      </div>
+                    </span>
                   </div>
                 </div>
               </li>

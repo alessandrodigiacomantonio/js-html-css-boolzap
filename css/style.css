@@ -351,7 +351,7 @@ html {
   right: 1.25rem;
   transform: translatex(250%);
   transition: 0.2s;
-  z-index: 1;
+  z-index: 2;
 }
 
 .message__dropdown {
@@ -372,11 +372,11 @@ html {
 .message__dropdown__item:hover {
   filter:brightness(0.95);
 }
-.--send {
+.--sent {
   box-shadow: -10px 5px 10px 1px rgba(220,	248, 198, 1);
   background-color: rgba(220,	248, 198, 1);
 }
-.--receive {
+.--received {
   box-shadow: -10px 5px 10px 1px #fff;
   background-color: #fff;
 }

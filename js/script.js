@@ -120,7 +120,7 @@ $(document).ready(function() {
       var newMessage = $(".footer__searchbar > .searchbar__input").val();
       $(".footer__searchbar > .searchbar__input").val("");
       var templateMessage = $(".template-message").find('.clearfix').clone();
-      templateMessage.children().attr('data-type', 'send').children('.message__txt').text(newMessage).siblings('.message__icon').addClass('--send');
+      templateMessage.children().attr('data-type', 'send').children('.message__txt').text(newMessage).siblings('.message__icon').addClass('--sent');
       var date = new Date();
       var hours = parseInt(date.getHours());
       if ( hours < 10 ) hours = '0'+hours;
@@ -134,7 +134,7 @@ $(document).ready(function() {
       $('.primary__main').scrollTop(scrollbarHeight);
       var timer = setTimeout(function () {
         var templateMessage = $(".template-message").find('.clearfix').clone();
-        templateMessage.children().attr('data-type','receive').children('.message__txt').text('Øk').siblings('.message__icon').addClass('--receive');
+        templateMessage.children().attr('data-type','receive').children('.message__txt').text('Øk').siblings('.message__icon').addClass('--received');
         templateMessage.find('.message__time').text(date);
         $('.chats-list__chat.active').append(templateMessage);
         $('.primary__main').scrollTop(scrollbarHeight);
